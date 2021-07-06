@@ -37,7 +37,8 @@ if %errorlevel%==1 goto start
 goto menu
 
 :start
-"..\Luke's Status Checker.bat"
+cls
+"Luke's Status Checker.bat"
 pause
 
 :cdset
