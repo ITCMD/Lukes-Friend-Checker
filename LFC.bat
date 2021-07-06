@@ -5,10 +5,11 @@ setlocal enabledelayedexpansion
 :menu
 cls
 call :cdset
-for /f %%A in ('echo "%cdd%"') do (
-	%%~D:
+for /f "delims=" %%A in ('echo "%cdd%"') do (
+	%%~dA
 	cd "%%~A"
 )
+pause
 echo [102;30m              Luke's Friend Checker               [0m
 if exist ..\Data\usr.ini (
 	set /p usr=<..\Data\usr.ini
