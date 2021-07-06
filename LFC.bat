@@ -4,8 +4,7 @@ setlocal enabledelayedexpansion
 @mode con lines=16 cols=50
 :menu
 cls
-
-cd bincd
+call :cd
 echo [102;30m              Luke's Friend Checker               [0m
 if exist ..\Data\usr.ini (
 	set /p usr=<..\Data\usr.ini
@@ -31,3 +30,6 @@ echo Go online now? (Press Y).
 choice /n >nul 2>nul
 if %errorlevel%==1 "%bincd%..\Friend Checker.bat"
 goto menu
+
+:cd
+rem setup script will add main programs dir below this line.
