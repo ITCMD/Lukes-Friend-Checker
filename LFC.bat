@@ -9,16 +9,16 @@ for /f "delims=" %%A in ('echo "%cdd%"') do (
 	%%~dA
 	cd "%%~A"
 )
-pause
+cd ..
 echo [102;30m              Luke's Friend Checker               [0m
 if exist ..\Data\usr.ini (
 	set /p usr=<..\Data\usr.ini
 	set usr=%usr: =%
 	set bincd=%cd%
 ) Else (
-	set usr=User
+	set usr=New User
 )
-echo.
+echo [90m%usr%[0m
 echo This tool is designed to tell you when your
 echo friends are available to hang out digitally.
 echo.

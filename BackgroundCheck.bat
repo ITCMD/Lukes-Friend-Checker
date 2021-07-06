@@ -29,7 +29,7 @@ if "%errorlevel%"=="0" (
 del /f /q usertestbg
 echo User did not go offline before closing. That's okay, we'll do it for them here.
 echo call :ftp "nul" "cd Online" "rm %usr%.online" "rm %usr%.playing"
-call :ftp "testtest" "cd Online" "rm %usr%.online" "rm %usr%.playing"
+call :ftp "nul" "cd Online" "rm %usr%.online" "rm %usr%.playing"
 echo all set! Exiting!
 timeout /t 4 >nul
 exit
