@@ -62,9 +62,11 @@ if exist "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Progr
 ) ELSE (
 	echo 5] [95m[Off][0m Launch on startup
 )
+echo 6] [91mLog out %usr%[0m
 echo X] Exit back to menu
-choice /c 12345x
-if %errorlevel%==6 goto loadwho
+choice /c 123456x
+if %errorlevel%==7 goto loadwho
+if %errorlevel%==6 goto logout
 if %errorlevel%==5 goto startup
 if %errorlevel%==1 (
 	if "%Notifications_Stay_Open%"=="Y" (
@@ -276,19 +278,18 @@ if %errorlevel%==1 (
 if %errorlevel%==2 goto settings
 if %errorlevel%==4 goto offline
 
+
+:logout
+cls
+echo Deleting User Tolken . . .
+del /f /q usr.ini
+timeout /t 2 /nobreak >nul
 :offline
 cls
 echo Going Offline . . .
 call :ftp "nul" "cd Online" "rm %usr%.Online" "rm %usr%.Playing"
 call "%bincd%\CMDS" /tk "Lukes Friend Checker - Background Listener"
-
-
-
-
-:notif
-rem notif "title" "message" "icon" "extra"
-notification.exe -title "New Message on CB Chattio" -body "New Messages on the CB chattio. Click to open." -icon icon.ico -keepopen n -start "%dir%"
-exit /b
+exit
  
 :ftp "outputfile(or nul)" commands
 set out=%~1
