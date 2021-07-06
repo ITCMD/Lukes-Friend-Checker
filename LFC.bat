@@ -13,8 +13,7 @@ cd ..
 echo [102;30m              Luke's Friend Checker               [0m
 if exist Data\usr.ini (
 	set /p usr=<Data\usr.ini
-	set usr=%usr: =%
-	set bincd=%cd%
+	set usr=!usr: =!
 ) Else (
 	set usr=New User
 )
