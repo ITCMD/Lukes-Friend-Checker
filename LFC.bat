@@ -5,6 +5,10 @@ setlocal enabledelayedexpansion
 :menu
 cls
 call :cdset
+for /f %%A in ('echo "%cdd%"') do (
+	%%~D:
+	cd "%%~A"
+)
 echo [102;30m              Luke's Friend Checker               [0m
 if exist ..\Data\usr.ini (
 	set /p usr=<..\Data\usr.ini
@@ -28,8 +32,12 @@ echo results [4malways[0m use this tool and be honest.
 echo.
 echo Go online now? (Press Y).
 choice /n >nul 2>nul
-if %errorlevel%==1 "%bincd%..\Friend Checker.bat"
+if %errorlevel%==1 goto start
 goto menu
+
+:start
+"..\Luke's Status Checker.bat"
+pause
 
 :cdset
 rem setup script will add main programs dir below this line.
