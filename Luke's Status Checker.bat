@@ -289,6 +289,7 @@ cls
 echo Going Offline . . .
 call :ftp "nul" "cd Online" "rm %usr%.Online" "rm %usr%.Playing"
 call "%bincd%\CMDS" /tk "Lukes Friend Checker - Background Listener"
+if exist "C:\Users\ldell\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\LFC.bat" "C:\Users\ldell\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\LFC.bat"
 exit
  
 :ftp "outputfile(or nul)" commands
