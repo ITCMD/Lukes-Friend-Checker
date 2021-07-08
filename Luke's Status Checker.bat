@@ -101,6 +101,7 @@ if exist "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Progr
 curl https://raw.githubusercontent.com/ITCMD/Lukes-Friend-Checker/main/LFC.bat -s -o "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\LFC.bat" >nul
 echo. >>"C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\LFC.bat"
 echo set cdd=%bincd% >>"C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\LFC.bat"
+echo set "filename=%~nx0" >>"C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\LFC.bat"
 echo exit /b >>"C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\LFC.bat"
 goto settings
 

@@ -37,7 +37,7 @@ goto menu
 
 :start
 cls
-"Luke's Status Checker.bat"
+"%filename%"
 pause
 
 :cdset
