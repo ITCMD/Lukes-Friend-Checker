@@ -1,10 +1,12 @@
 # Lukes-Friend-Checker
 
-This was just for me and a friend.
+This was just for me and my good buddies.
 
 It's designed to easily tell if your friends are online and available to hang out.
 
+All you need is the main file (found in the releases folder) and it will download the rest for you.
 
+### If you're setting up with your own FTP server
 
 The home directory for the ftp user **must** have two folders: `Users` and `GamerStatus`. Within the `GamerStatus` Folder there must be one folder, `Online`. Ideally I'd write the code to set that up for you but,
 
