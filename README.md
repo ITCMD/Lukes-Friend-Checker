@@ -4,7 +4,7 @@ This was just for me and my good buddies.
 
 It's designed to easily tell if your friends are online and available to hang out.
 
-All you need is the main file (found in the releases folder) and it will download the rest for you.
+All you need is the main file (found in [releases](https://github.com/ITCMD/Lukes-Friend-Checker/releases)) and it will download the rest for you.
 
 ### If you're setting up with your own FTP server
 
